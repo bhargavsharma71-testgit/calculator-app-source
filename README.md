@@ -1,27 +1,20 @@
-# calculator-app-source-
+# 🚀 DevOps Calculator App
 
-Flask calculator app with Bootstrap UI for Azure DevOps CI/CD deployment
+A simple Flask-based calculator deployed using Azure DevOps CI/CD pipeline.
 
-## Introduction
-Simple calculator web app built using Flask.
+## 🔧 Features
+- Add, Subtract, Multiply, Divide
+- Clean UI
+- Error handling
+- CI/CD enabled
 
-## Getting Started
-1. Install dependencies:
-   pip install -r requirements.txt
+## 🛠 Tech Stack
+- Python (Flask)
+- Azure Web App
+- Azure DevOps Pipelines
 
-2. Run the app:
-   python app.py
+## ▶️ Run Locally
 
-3. Open browser:
-   http://127.0.0.1:5000
-
-## Features
-- Add
-- Subtract
-- Multiply
-- Divide
-
-## Tech Stack
-- Python
-- Flask
-- HTML/CSS (Bootstrap)
+```bash
+pip install -r requirements.txt
+python app.py

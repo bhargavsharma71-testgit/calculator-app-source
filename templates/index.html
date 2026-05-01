@@ -1,15 +1,60 @@
-<form action="/calculate" method="post">
-    <input type="text" name="num1" placeholder="Enter first number">
-    <input type="text" name="num2" placeholder="Enter second number">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .box {
+            background: white;
+            color: black;
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input, select, button {
+            margin: 10px;
+            padding: 8px;
+            width: 80%;
+        }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
 
-    <select name="operation">
-        <option value="add">+</option>
-        <option value="sub">-</option>
-        <option value="mul">*</option>
-        <option value="div">/</option>
-    </select>
+<body>
 
-    <button type="submit">=</button>
-</form>
+<h1>🚀 DevOps Calculator</h1>
 
-<h3>Result: {{ result }}</h3>
+<div class="box">
+    <form action="/calculate" method="post">
+        <input type="number" name="num1" placeholder="Enter first number" required>
+        <input type="number" name="num2" placeholder="Enter second number" required>
+
+        <select name="operation">
+            <option value="add">Add (+)</option>
+            <option value="sub">Subtract (-)</option>
+            <option value="mul">Multiply (*)</option>
+            <option value="div">Divide (/)</option>
+        </select>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result is not none %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+</div>
+
+</body>
+</html>
